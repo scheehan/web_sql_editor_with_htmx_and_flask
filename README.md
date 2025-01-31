@@ -183,10 +183,10 @@ https://unpkg.com/browse/htmx.org@2.0.4/dist/ext/debug.js
 ### Install & run web app
 
 ``` 
-git clone https://github.com/scheehan/http_auth_error_handling_with_htmx.git
+git clone https://github.com/scheehan/web_sql_editor_with_htmx_and_flask.git
 ```
 ```
-cd http_auth_error_handling_with_htmx
+cd web_sql_editor_with_htmx_and_flask
 pip install -r requirements.txt
 ```
 
