@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+    <script src="{{url_for('static', filename='js/htmx.min.js')}}"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12/dist/ext/debug.js"></script>
+
+    <title>Edit</title>
+</head>
+<body>
+
+    <div>
+        <h2>EDIT</h2>
+        <form hx-prompt="Enter Yes/No to confirm update" hx-post='{{ url_for( "edit", number=edit[0] ) }}' hx-target="body">
+            Name: <input name="username" value="{{edit[1]}}"/></br>
+            Ext: <input name="ext" value="{{edit[2]}}"/></br>
+            Email: <input name="email" value="{{edit[3]}}"/></br>
+            <br>
+            <button hx-ext="debug">UPDATE</button></br>
+        </form>
+    </div>
+
+</body>
+</html>

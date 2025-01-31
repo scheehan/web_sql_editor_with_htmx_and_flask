@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- FlaskApp</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+    <script src="{{url_for('static', filename='js/htmx.min.js')}}"></script>
+
+    
+</head>
+<body>
+    <hr>
+
+<div>
+    <form id="myform" onsubmit="return confirm('Do you really want to submit the form ?');">
+
+        <label for="first">Username:</label>
+        <input type="text" id="first" name="nfirst" 
+            placeholder="Enter your Username" required>
+            
+        <input type="submit" />
+    <form>
+    </div>
+    <br>
+
+
+
+</body>
+</html>

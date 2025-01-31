@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- FlaskApp</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+    <script src="{{url_for('static', filename='js/htmx.min.js')}}"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12/dist/ext/debug.js"></script>
+    
+</head>
+<body>
+    <hr>
+    <br>
+    <div>
+    <a href='{{ url_for( "add" ) }}'>ADD entry</a>
+    </div>
+    <br>
+    <div >
+        {% if myposts %}
+        <table border="1">
+            <thead>
+                <td>id</td>
+                <td>name</td>
+                <td>ext</td>
+                <td>email</td>
+                <td>options</td>
+            </thead>
+        
+            {% for row in myposts %}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                    <td>
+                        <button onclick="location.href='{{ url_for( "edit", number=row[0] ) }}'" type="button">EDIT</button> | 
+                        
+                        <button hx-post='{{ url_for( "delete", number=row[0] ) }}' hx-confirm="Are you sure you wish to delete record name {{ row[1] }}?" hx-target="body" hx-ext="debug">DELETE</button>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+        
+        {% else %}
+        Empty</br>
+        {% endif %}    
+
+
+    </div>
+
+
+
+
+</body>
+</html>

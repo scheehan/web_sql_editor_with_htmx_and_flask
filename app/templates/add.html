@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+    <script src="{{url_for('static', filename='js/htmx.min.js')}}"></script>
+    <title>Add</title>
+</head>
+<body>
+    <h1>ADD</h1>
+    <form hx-post="{{ url_for( "add" ) }}" hx-confirm="information correct?" hx-target="body" hx-ext="debug">
+        Name: <input name="username" value=""/></br>
+        Ext: <input name="ext" value=""/></br>
+        Email: <input name="email" value=""/></br>
+    <button>UPDATE</button></br>
+</form>
+</body>
+</html>
