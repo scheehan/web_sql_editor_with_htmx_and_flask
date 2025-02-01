@@ -1,4 +1,4 @@
-![submit form](/app/images/intro.png)
+[![submit form](/app/images/intro.png)](https://youtu.be/JqLqYW-zdQY)
 
 # HTMX hx-prompt and hx-confirm underlying implementation with Flask
 
