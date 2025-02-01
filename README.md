@@ -120,7 +120,7 @@ when the acknowledgement message doesn't match, changes will be ignored. exhibit
 once fired button action, hx-confirm triggered and a window prompt pop up reqest user to input confirmation message. user needs to input intended message as display in message window. user click "ok" button 
 to acknowledge the change. form data and HTTP header hx-prompt togerther with input message sent to server.
 
-![hx-confirm](/app/images/hx-prompt-debug-01.gif)
+![hx-prompt](/app/images/hx-prompt-debug-01.gif)
 
 ```html
 <form hx-prompt="Enter Yes/No to confirm update" hx-post='{{ url_for( "edit", number=edit[0] ) }}' hx-target="body">
