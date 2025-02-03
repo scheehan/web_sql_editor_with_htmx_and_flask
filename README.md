@@ -177,6 +177,11 @@ https://unpkg.com/browse/htmx.org@2.0.4/dist/ext/debug.js
 <button hx-post='{{ url_for( "delete", number=row[0] ) }}' hx-target="body" hx-ext="debug">DELETE</button>
 ```
 
+### Additional note about initialise local DB based on schema.sql setup
+
+```
+# flask init-db
+```
 
 ## Where to download code Sample
 
