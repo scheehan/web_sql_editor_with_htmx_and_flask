@@ -138,6 +138,8 @@ once user input confirmation message and click button "OK" or "Cancel", submit h
 
 ![hx-confirm](/app/images/hx-prompt-console-log-y-header-01.png)
 
+Below code snippet depict condition check for HTTP header with "HX-Prompt" field and value user provided. if its matched, respective form data will be executed by SQL query, update into local DB.
+
 ```python
         if request.headers['HX-Prompt'] == 'Yes':
 
